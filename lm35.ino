@@ -1,5 +1,5 @@
 int val;
-int tempPin = 1;
+int tempPin = A1;
 
 void setup()
 {
