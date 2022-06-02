@@ -1,4 +1,3 @@
-
 const int AOUTpin=A0;//the AOUT pin of the alcohol sensor goes into analog pin A0 of the arduino
 const int ledPin=13;//the anode of the LED connects to digital pin D13 of the arduino
 

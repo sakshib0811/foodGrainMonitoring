@@ -16,10 +16,4 @@ void loop()
   Serial.print("*C");
   Serial.println();
   delay(1000);
-/* uncomment this to get temperature in farenhite
-Serial.print("TEMPRATURE = ");
-Serial.print(farh);
-Serial.print("*F");
-Serial.println();
-*/
 }
