@@ -1,5 +1,7 @@
 #define echoPin 2 // attach pin D2 Arduino to pin Echo of HC-SR04
 #define trigPin 3 //attach pin D3 Arduino to pin Trig of HC-SR04
+#define SensorPin A2 
+float sensorValue = 0;
 int val;
 int tempPin = A1;
 
@@ -19,8 +21,8 @@ void setup() {
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an OUTPUT
   pinMode(echoPin, INPUT); // Sets the echoPin as an INPUT
   Serial.begin(9600); // // Serial Communication is starting with 9600 of baudrate speed
-  Serial.println("Ultrasonic Sensor HC-SR04 Test"); // print some text in Serial Monitor
-  Serial.println("with Arduino UNO R3");
+//  Serial.println("Ultrasonic Sensor HC-SR04 Test"); // print some text in Serial Monitor
+//  Serial.println("with Arduino UNO R3");
 }
 
 void loop()
@@ -36,9 +38,9 @@ void loop()
   }
   data[0]= analogRead(AOUTpin);//reads the analaog value from the alcohol sensor's AOUT pin
   mapped=map(data[0],0,1023,0,600);
-  Serial.print("Gas value: ");
-  Serial.println(mapped);//prints the alcohol value
-  delay(2000);
+//  Serial.print("Gas value: ");
+//  Serial.println(mapped);//prints the alcohol value
+//  delay(2000);
   if((alco_high-alco_low)>150){
     if(data[0] > (alco_high-.95*(alco_high-alco_low)))//this is true if the read is greater than 95% of the span
       digitalWrite(2, HIGH);
@@ -66,11 +68,10 @@ void loop()
   float mv = ( val/1024.0)*5000;
   float cel = mv/10;
   float farh = (cel*9)/5 + 32;
-  Serial.print("TEMPRATURE = ");
-  Serial.print(cel);
-  Serial.print("*C");
-  Serial.println();
-  delay(1000);
+//  Serial.print("TEMPRATURE = ");
+//  Serial.print(cel);
+//  Serial.print("*C");
+//  delay(1000);
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
@@ -78,7 +79,27 @@ void loop()
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH);
   distance = duration * 0.034 / 2;
+//  Serial.print("Distance: ");
+//  Serial.print(distance);
+//  Serial.println(" cm"); 
+  for (int i = 0; i <= 100; i++) 
+ { 
+   sensorValue = sensorValue + analogRead(SensorPin); 
+   delay(1); 
+ } 
+ sensorValue = sensorValue/100.0;
+ Serial.print("Gas value: ");
+  Serial.println(mapped);
+
+  Serial.print("TEMPRATURE = ");
+  Serial.print(cel);
+  Serial.println("*C");
+//  Serial.println("");
   Serial.print("Distance: ");
   Serial.print(distance);
-  Serial.println(" cm");  
+  Serial.println(" cm");
+
+ Serial.print("Moisture Value: ");
+ Serial.println(sensorValue); 
+ delay(2000); 
 }
