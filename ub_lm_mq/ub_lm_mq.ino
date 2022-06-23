@@ -1,3 +1,16 @@
+#include <Firebase.h>
+#include <FirebaseArduino.h>
+#include <FirebaseCloudMessaging.h>
+#include <FirebaseError.h>
+#include <FirebaseHttpClient.h>
+#include <FirebaseObject.h>
+#define FIREBASE_HOST "food-monitoring-system-c04ab-default-rtdb.firebaseio.com"
+#define FIREBASE_AUTH "TeKSP7mkhqVAtyz1hFSs5ZrSVNpKivlyw3FwlvvV"
+#define WIFI_SSID "Sakshi"
+#define WIFI_PASSWORD "bharti987766$$"
+
+
+
 #define echoPin 2 // attach pin D2 Arduino to pin Echo of HC-SR04
 #define trigPin 3 //attach pin D3 Arduino to pin Trig of HC-SR04
 #define SensorPin A2 
@@ -103,3 +116,74 @@ void loop()
  Serial.println(sensorValue); 
  delay(2000); 
 }
+
+
+// connect to wifi.
+ WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+ Serial.print("connecting");
+ while (WiFi.status() != WL_CONNECTED) {
+   Serial.print(".");
+   delay(500);
+ }
+ Serial.println();
+ Serial.print("connected: ");
+ Serial.println(WiFi.localIP());
+ Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+//Set Float value to database.
+
+// set Float  value
+ Firebase.setFloat("number", 42.0);
+ // handle error
+ if (Firebase.failed()) {
+     Serial.print("setting /number failed:");
+     Serial.println(Firebase.error());  
+     return;
+ }
+//Update Float value.
+
+// update Float  value
+ Firebase.setFloat("number", 43.0);
+ // handle error
+ if (Firebase.failed()) {
+     Serial.print("setting /number failed:");
+     Serial.println(Firebase.error());  
+     return;
+ }
+//Get Float value from database.
+
+ // get value  
+Firebase.getFloat("number");
+//Remove value from database.
+
+// remove value
+ Firebase.remove("number");
+//Set string value to database.
+
+// set string value
+ Firebase.setString("message", "hello world");
+ // handle error
+ if (Firebase.failed()) {
+     Serial.print("setting /message failed:");
+     Serial.println(Firebase.error());  
+     return;
+ }
+//Set bool value to database.
+
+// set bool value
+ Firebase.setBool("truth", false);
+ // handle error
+ if (Firebase.failed()) {
+     Serial.print("setting /truth failed:");
+     Serial.println(Firebase.error());  
+     return;
+ }
+//Append a new value to database.
+
+// append a new value to /logs
+ String name = Firebase.pushInt("logs", n++);
+ // handle error
+ if (Firebase.failed()) {
+     Serial.print("pushing /logs failed:");
+     Serial.println(Firebase.error());  
+     return;
+ }
