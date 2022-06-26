@@ -1,4 +1,7 @@
-
+.main{
+    display: flex;
+    flex-direction: column;
+}
 .navbar{
     color: white;
     height: 100vh;
@@ -10,4 +13,5 @@
 .nav_content:hover{
     background-color: #098ea0;
     font-weight: 700;
+    cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nav.css";
+import Dashboard from "./Dashboard.js";
 const Nav = () => {
   return (
     <div className="main">
@@ -9,7 +10,7 @@ const Nav = () => {
           style={{
             backgroundColor: "#098ea0",
             marginTop: "0px",
-            height: "60px",
+            height: "45px",
           }}
         >
           <p
@@ -37,6 +38,7 @@ const Nav = () => {
           <li className="nav_content">About</li>
         </ul>
       </div>
+      <Dashboard />
     </div>
   );
 };

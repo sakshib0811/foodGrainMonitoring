@@ -1,0 +1,41 @@
+.dashboard{
+    position: absolute;
+    margin-left: 45%;
+}
+
+.data{
+    display: flex;
+}
+
+.data_display{
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-style: groove;
+    width: 450px;
+    height: 450px;
+    margin-left: 0px;
+}
+
+.graph_display{
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-style: groove;
+    width: 450px;
+    height: 450px;
+    margin-left: 25px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .data_display{
+        max-width: fit-content;
+        max-height: fit-content;
+        margin-left: 0px;
+    }
+     .graph_display{
+        max-width: fit-content;
+        max-height: fit-content;
+    }
+
+}
