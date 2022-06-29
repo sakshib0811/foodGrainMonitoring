@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Nav.css";
 import Dashboard from "./Dashboard.js";
 const Nav = () => {
+  const [val, setVal] = useState(0);
+  const [heading, setHeading] = useState("MOISTURE SENSOR");
   return (
     <div className="main">
       <div className="navbar">
@@ -30,15 +32,55 @@ const Nav = () => {
         <ul
           style={{ listStyle: "none", lineHeight: "90px", paddingLeft: "0px" }}
         >
-          <li className="nav_content">Moisture Content</li>
-          <li className="nav_content">Quantity of Wheat</li>
-          <li className="nav_content">Temperature of Silo</li>
-          <li className="nav_content">CO₂ Content</li>
-          <li className="nav_content">Relative Humidity</li>
+          <li
+            className="nav_content"
+            onClick={() => {
+              setHeading("MOISTURE ANALYSIS");
+              setVal(74.38);
+            }}
+          >
+            Moisture Content
+          </li>
+          <li
+            className="nav_content"
+            onClick={() => {
+              setHeading("QUANTITY OF WHEAT");
+              setVal(806);
+            }}
+          >
+            Quantity of Wheat
+          </li>
+          <li
+            className="nav_content"
+            onClick={() => {
+              setHeading("TEMPERATURE");
+              setVal(55);
+            }}
+          >
+            Temperature of Silo
+          </li>
+          <li
+            className="nav_content"
+            onClick={() => {
+              setHeading("CO₂ CONTENT");
+              setVal(2.876);
+            }}
+          >
+            CO₂ Content
+          </li>
+          <li
+            className="nav_content"
+            onClick={() => {
+              setHeading("RELATIVE HUMIDITY");
+              setVal("67.36");
+            }}
+          >
+            Relative Humidity
+          </li>
           <li className="nav_content">About</li>
         </ul>
       </div>
-      <Dashboard />
+      <Dashboard title={heading} value={val} />
     </div>
   );
 };
