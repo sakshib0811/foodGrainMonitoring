@@ -31,10 +31,10 @@ function About() {
       <h1 className="mission">OUR GUIDE</h1>
       <div className="guide_detail">
         <img src={img1} alt="guide image" className="guide_img" />
-        <div className="guide_data">
-          <h1>Dr. Padmaja K.V.</h1>
-        </div>
+        <h1 style={{ marginBottom: "0px" }}>Dr. Padmaja K.V.</h1>
+        <p style={{ marginTop: "auto" }}>Associate Professor E&I Department </p>
       </div>
+      <h1 className="mission">OUR TEAM</h1>
     </div>
   );
 }
