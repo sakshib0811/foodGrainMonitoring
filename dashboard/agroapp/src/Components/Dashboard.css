@@ -1,6 +1,6 @@
 .dashboard{
     position: absolute;
-    margin-left: 45%;
+    margin-left: 27%;
 }
 
 .data{
@@ -12,8 +12,12 @@
     border-radius: 10px;
     border-style: groove;
     width: 450px;
-    height: 450px;
+    height: max-content;
     margin-left: 0px;
+    margin-top: 60px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    align-content: center;
 }
 
 .graph_display{
@@ -24,6 +28,19 @@
     height: 450px;
     margin-left: 25px;
 }
+
+.sig{
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.significance{
+    /* margin-left: 160px; */
+    font-weight: bolder;
+}
+
 
 
 @media only screen and (max-width: 1024px) {
