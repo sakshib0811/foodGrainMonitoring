@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   const [val, setVal] = useState(0);
   const [heading, setHeading] = useState("MOISTURE SENSOR");
+  const [signif, setSignif] = useState(
+    "The Moisture Content present in the Silo will help us to determine the growth of microbes and pH of the silo. The pH of the silo will help us to grade and classify the grains according to its use.  The growth of microbes will further help us to take precautionary measures to prevent its growth "
+  );
   return (
     <div className="main">
       <div className="navbar">
@@ -38,6 +41,9 @@ const Nav = () => {
             onClick={() => {
               setHeading("MOISTURE ANALYSIS");
               setVal(74.38);
+              setSignif(
+                " The Moisture Content present in the Silo will help us to determine the growth of microbes and pH of the silo. The pH of the silo will help us to grade and classify the grains according to its use.  The growth of microbes will further help us to take precautionary measures to prevent its growth "
+              );
             }}
           >
             Moisture Content
@@ -47,6 +53,9 @@ const Nav = () => {
             onClick={() => {
               setHeading("QUANTITY OF WHEAT");
               setVal(806);
+              setSignif(
+                "In case there is illegal activities taking place in terms of corruption, the change in the level of wheat grains in the silo which will alert the owner. The owner once informed can take necessary actions to prevent such illegal practices."
+              );
             }}
           >
             Quantity of Wheat
@@ -56,6 +65,9 @@ const Nav = () => {
             onClick={() => {
               setHeading("TEMPERATURE");
               setVal(55);
+              setSignif(
+                " The measurement of temperature will help to determine the shelf life of the wheat grains. The growth of microbes are also dependent on the amount of heat and temperature they are exposed to."
+              );
             }}
           >
             Temperature of Silo
@@ -65,6 +77,9 @@ const Nav = () => {
             onClick={() => {
               setHeading("CO₂ CONTENT");
               setVal(2.876);
+              setSignif(
+                " To get the information about the amount of CO2 present in the silo. It will help us to determine information about the microbial activity. The increased level of CO2 increases growth of microbes in a closed space."
+              );
             }}
           >
             CO₂ Content
@@ -74,6 +89,9 @@ const Nav = () => {
             onClick={() => {
               setHeading("RELATIVE HUMIDITY");
               setVal("67.36");
+              setSignif(
+                "Relative Humidity of a closed place is inversely proportional to its shelf life. It will help us to determine the growth rate of microbes for next five days."
+              );
             }}
           >
             Relative Humidity
@@ -83,7 +101,7 @@ const Nav = () => {
           </Link>
         </ul>
       </div>
-      <Dashboard title={heading} value={val} />
+      <Dashboard title={heading} value={val} signi={signif} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Dashboard.css";
 import img from "./images.png";
-const Dashboard = ({ title, value }) => {
+const Dashboard = ({ title, value, signi }) => {
   return (
     <div className="dashboard">
       <p
@@ -16,7 +16,10 @@ const Dashboard = ({ title, value }) => {
       <div className="data">
         <div className="data_display">
           <h3>CURRENT DATA : {value}</h3>
-          <div className="sig"> significance</div>
+          <div className="sig">
+            <span className="significance">SIGNIFICANCE:</span> <br />
+            <br /> {signi}
+          </div>
         </div>
         <div className="graph_display">
           <h3>GRAPHICAL REPRESENTATION</h3>
