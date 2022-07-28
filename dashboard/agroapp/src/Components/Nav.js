@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Nav.css";
 import Dashboard from "./Dashboard.js";
+import { Link } from "react-router-dom";
 const Nav = () => {
   const [val, setVal] = useState(0);
   const [heading, setHeading] = useState("MOISTURE SENSOR");
@@ -77,7 +78,9 @@ const Nav = () => {
           >
             Relative Humidity
           </li>
-          <li className="nav_content">About</li>
+          <Link to="about" style={{ textDecoration: "none", color: "white" }}>
+            <li className="nav_content">About</li>
+          </Link>
         </ul>
       </div>
       <Dashboard title={heading} value={val} />

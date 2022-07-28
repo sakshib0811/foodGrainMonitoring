@@ -1,0 +1,43 @@
+.main-nav {
+    width: 100%;
+    height: 5rem;
+    /* display: grid; */
+    /* grid-template-columns: 10rem 1fr 2fr 1fr 10rem; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(37,143,215) 0px 30px 60px -30px;
+      background: linear-gradient(180deg, rgba(0,156,177,1) 100%,rgba(37,143,215,1) 74%);
+      margin-top: -27px;
+  }
+  
+  .title{
+    width: 100%;
+    padding-top: 21px;
+    /* color: white; */
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .mission{
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-weight: 100;
+    color: rgb(9, 105, 98);
+  }
+
+  .mission_para{
+    text-align: justify;
+    margin-left: 49px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+  }
+
+
+  .guide_img{
+    width: 250px;
+    height: 301px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  border-radius: 50%;
+  }
