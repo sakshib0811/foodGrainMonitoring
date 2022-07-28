@@ -1,4 +1,6 @@
-#include <dht.h>
+#include "DHT.h"
+
+//#include "dht.h"
 #define dht_apin A0 // Analog Pin sensor is connected to
  
 dht DHT;
