@@ -4,7 +4,7 @@
 }
 .navbar{
     color: white;
-    height: 100vh;
+    /* height: 100vh; */
     width: 20%;
     background: rgb(37,143,215);
     background: linear-gradient(180deg, rgba(0,156,177,1) 100%,rgba(37,143,215,1) 74%)
