@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import Barchart from "./Barchart";
 import "./Dashboard.css";
 // import Barchart from "./B
@@ -41,6 +41,7 @@ const Dashboard = ({ title, value, signi, img }) => {
             style={{
               width: "100%",
               marginTop: "30px",
+              marginLeft: "-15px",
             }}
           />
           {/* <Barchart chartData={userdata} /> */}
