@@ -2,13 +2,19 @@ import React, { useState } from "react";
 import "./Nav.css";
 import Dashboard from "./Dashboard.js";
 import { Link } from "react-router-dom";
-const Nav = () => {
-  const [val, setVal] = useState(0);
+import m from "./images/m.png";
+import q from "./images/q.png";
+import t from "./images/t.png";
+import c from "./images/c.png";
+import h from "./images/h.png";
+const Nav = ({ humidity, temp, quantity, co2, moisture }) => {
+  const [val, setVal] = useState("60%");
   const [heading, setHeading] = useState("MOISTURE SENSOR");
   const [signif, setSignif] = useState(
     "The Moisture Content present in the Silo will help us to determine the growth of microbes and pH of the silo. The pH of the silo will help us to grade and classify the grains according to its use.  The growth of microbes will further help us to take precautionary measures to prevent its growth "
   );
-  const [unit1, setunit1] = useState("%");
+  const [graph, setGraph] = useState(m);
+
   return (
     <div className="main">
       <div className="navbar">
@@ -41,8 +47,9 @@ const Nav = () => {
             className="nav_content"
             onClick={() => {
               setHeading("MOISTURE ANALYSIS");
-              setVal(17.9);
-              setunit1("%");
+              setVal("60%");
+              setGraph(m);
+              console.log(moisture);
               setSignif(
                 " The Moisture Content present in the Silo will help us to determine the growth of microbes and pH of the silo. The pH of the silo will help us to grade and classify the grains according to its use.  The growth of microbes will further help us to take precautionary measures to prevent its growth "
               );
@@ -54,8 +61,9 @@ const Nav = () => {
             className="nav_content"
             onClick={() => {
               setHeading("QUANTITY OF WHEAT");
-              setVal(12.3);
-              setunit1("cm");
+              setVal("12.3cm");
+              setGraph(q);
+              console.log(quantity);
               setSignif(
                 "In case there is illegal activities taking place in terms of corruption, the change in the level of wheat grains in the silo which will alert the owner. The owner once informed can take necessary actions to prevent such illegal practices."
               );
@@ -67,8 +75,9 @@ const Nav = () => {
             className="nav_content"
             onClick={() => {
               setHeading("TEMPERATURE");
-              setVal(42);
-              setunit1("°C");
+              setVal("29°C");
+              setGraph(t);
+              console.log(temp);
               setSignif(
                 " The measurement of temperature will help to determine the shelf life of the wheat grains. The growth of microbes are also dependent on the amount of heat and temperature they are exposed to."
               );
@@ -80,8 +89,9 @@ const Nav = () => {
             className="nav_content"
             onClick={() => {
               setHeading("CO₂ CONTENT");
-              setVal(6.42);
-              setunit1("%");
+              setVal("2.89%");
+              setGraph(c);
+              console.log(co2);
               setSignif(
                 " To get the information about the amount of CO2 present in the silo. It will help us to determine information about the microbial activity. The increased level of CO2 increases growth of microbes in a closed space."
               );
@@ -93,8 +103,9 @@ const Nav = () => {
             className="nav_content"
             onClick={() => {
               setHeading("RELATIVE HUMIDITY");
-              setVal("14.8");
-              setunit1("%");
+              setVal("73%");
+              setGraph(h);
+              console.log(humidity);
               setSignif(
                 "Relative Humidity of a closed place is inversely proportional to its shelf life. It will help us to determine the growth rate of microbes for next five days."
               );
@@ -110,7 +121,13 @@ const Nav = () => {
           </Link>
         </ul>
       </div>
-      <Dashboard title={heading} value={val} signi={signif} unit={unit1} />
+      <Dashboard
+        title={heading}
+        value={val}
+        signi={signif}
+        userdata={graph}
+        img={graph}
+      />
     </div>
   );
 };

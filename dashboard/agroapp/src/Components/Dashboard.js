@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+// import Barchart from "./Barchart";
 import "./Dashboard.css";
-import img from "./images.png";
-const Dashboard = ({ title, value, signi, unit }) => {
+// import Barchart from "./B
+
+const Dashboard = ({ title, value, signi, img }) => {
+  // const data = {
+  //   // type: "bar",
+  //   labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
+  //   datasets: [
+  //     {
+  //       label: "previous 5 days data",
+  //       data: [...userdata],
+  //     },
+  //   ],
+  // };
   return (
     <div className="dashboard">
       <p
@@ -15,10 +27,7 @@ const Dashboard = ({ title, value, signi, unit }) => {
       </p>
       <div className="data">
         <div className="data_display">
-          <h3>
-            CURRENT DATA : {value}
-            {unit}
-          </h3>
+          <h3>CURRENT DATA : {value}</h3>
           <div className="sig">
             <span className="significance">SIGNIFICANCE:</span> <br />
             <br /> {signi}
@@ -34,6 +43,7 @@ const Dashboard = ({ title, value, signi, unit }) => {
               marginTop: "30px",
             }}
           />
+          {/* <Barchart chartData={userdata} /> */}
         </div>
       </div>
     </div>

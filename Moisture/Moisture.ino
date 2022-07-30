@@ -1,4 +1,4 @@
-#define SensorPin A0 
+#define SensorPin A1
 float sensorValue = 0; 
 void setup() { 
  Serial.begin(9600); 

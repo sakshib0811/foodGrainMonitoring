@@ -1,0 +1,23 @@
+.data1{
+    margin-left: 250px;
+    margin-top: -10px;
+}
+
+.data2{
+    padding-left: 20px;
+    max-height: max-content;
+    /* padding-bottom: 50px; */
+    margin-top: 100px;
+    text-align: left;
+    margin-top: -10px;
+}
+
+.con{
+    text-align: left;
+}
+
+.con_hr{
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: -19px;
+}
