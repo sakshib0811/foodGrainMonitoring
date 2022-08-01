@@ -1,11 +1,11 @@
 import "./App.css";
-import React, { useState } from "react";
+import React from "react";
 import Nav from "./Components/Nav.js";
 import About from "./Components/About";
 import { Routes, Route } from "react-router-dom";
 import Result from "./Components/Result";
 import Input from "./Components/Input";
-import { db } from "./firebase";
+// import { db } from "./firebase";
 //import { collection, query, where, getDocs } from "firebase/firestore";
 function App() {
   // const [posts, setPosts] = useState([]);

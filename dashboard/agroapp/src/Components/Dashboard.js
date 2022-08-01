@@ -39,9 +39,9 @@ const Dashboard = ({ title, value, signi, img }) => {
             src={img}
             alt="graph"
             style={{
-              width: "100%",
+              width: "95%",
               marginTop: "30px",
-              marginLeft: "-15px",
+              marginLeft: "-10px",
             }}
           />
           {/* <Barchart chartData={userdata} /> */}

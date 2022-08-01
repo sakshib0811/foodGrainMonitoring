@@ -62,6 +62,16 @@ function Result() {
             />
           </div>
         </div>
+        <div className="ml">
+          <h1>Prediction of relative humidity for next 5 days</h1>
+          <ul style={{ listStyle: "none" }}>
+            <li>2022-07-31 00:00:00: 52.11423674184272</li>
+            <li>2022-08-01 00:00:00: 70.06738982746093</li>
+            <li>2022-08-02 00:00:00: 69.67556704734461</li>
+            <li>2022-08-03 00:00:00: 85.19270902548756</li>
+            <li>2022-08-04 00:00:00: 78.12112730777712</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

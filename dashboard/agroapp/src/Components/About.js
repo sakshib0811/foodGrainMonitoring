@@ -33,7 +33,7 @@ function About() {
             <img
               src={img1}
               alt="Guide"
-              style={{ width: "100%" }}
+              style={{ width: "80%" }}
               className="guide_img"
             />
             <div class="container">
