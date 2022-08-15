@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Result.css";
-import all from "./images/all.png";
+import all from "./images/result3.png";
 function Result() {
   return (
     <div>
@@ -26,22 +26,23 @@ function Result() {
           <div className="data_display data1">
             <h3>SPECIFICATIONS:</h3>
             <div className="sig">
-              <span className="significance">HUMIDITY:</span> 73% <br />
-              <span className="significance">MOISTURE:</span> 60% <br />
-              <span className="significance">TEMPERATURE:</span> 29°C <br />
-              <span className="significance">CO2 GAS LEVELS:</span> 2.89% <br />
-              <span className="significance">pH VALUE:</span> 5.89 <br />
+              <span className="significance">RELATIVE HUMIDITY:</span> 66.8%{" "}
+              <br />
+              <span className="significance">MOISTURE:</span> 58.6% <br />
+              <span className="significance">TEMPERATURE:</span> 24°C <br />
+              <span className="significance">CO2 GAS LEVELS:</span> 2.44% <br />
+              <span className="significance">pH VALUE:</span> 5.92 <br />
             </div>
             <div className="con">
               <h3 className="con_hr">CONCLUSION:</h3>
               <div className="sig">
                 <span className="significance">Microbial Activity: </span>{" "}
-                Normal Bacterial growth
+                Normal Chemical Degradation.
                 <br />
-                <span className="significance">Grading: </span>Household
+                <span className="significance">Grading: </span>Household.
                 <br />
                 <span className="significance">Shelf Life: </span> 5 to 11
-                months
+                months.
                 <br />
               </div>
             </div>
@@ -65,11 +66,11 @@ function Result() {
         <div className="ml">
           <h1>Prediction of relative humidity for next 5 days</h1>
           <ul style={{ listStyle: "none" }}>
-            <li>2022-07-31 00:00:00: 52.11423674184272</li>
-            <li>2022-08-01 00:00:00: 70.06738982746093</li>
-            <li>2022-08-02 00:00:00: 69.67556704734461</li>
-            <li>2022-08-03 00:00:00: 85.19270902548756</li>
-            <li>2022-08-04 00:00:00: 78.12112730777712</li>
+            <li>2022-08-16 00:00:00: 68.26452659821744</li>
+            <li>2022-08-17 00:00:00: 66.9822417850277</li>
+            <li>2022-08-18 00:00:00: 90.40564183071167</li>
+            <li>2022-08-19 00:00:00: 87.38390234534772</li>
+            <li>2022-08-20 00:00:00: 67.92913863133856</li>
           </ul>
         </div>
       </div>

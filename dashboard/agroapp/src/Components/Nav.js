@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./Nav.css";
 import Dashboard from "./Dashboard.js";
 import { Link } from "react-router-dom";
-import m from "./images/m.png";
-import q from "./images/q.png";
-import t from "./images/t.png";
-import c from "./images/c.png";
-import h from "./images/h.png";
+import m from "./images/moisture.png";
+import q from "./images/q1.png";
+import t from "./images/temp.png";
+import c from "./images/co2.png";
+import h from "./images/r1.png";
 const Nav = () => {
-  const [val, setVal] = useState("60%");
+  const [val, setVal] = useState("58.6%");
   const [heading, setHeading] = useState("MOISTURE SENSOR");
   const [signif, setSignif] = useState(
     "The Moisture Content present in the Silo will help us to determine the growth of microbes and pH of the silo. The pH of the silo will help us to grade and classify the grains according to its use.  The growth of microbes will further help us to take precautionary measures to prevent its growth "
@@ -47,8 +47,8 @@ const Nav = () => {
             className="nav_content"
             onClick={() => {
               setHeading("MOISTURE ANALYSIS");
-              setVal("60%");
-              setGraph(m);
+              setVal("58.6%");
+              setGraph(m); //graph color : #ebc9f0
               // console.log(moisture);
               setSignif(
                 " The Moisture Content present in the Silo will help us to determine the growth of microbes and pH of the silo. The pH of the silo will help us to grade and classify the grains according to its use.  The growth of microbes will further help us to take precautionary measures to prevent its growth "
@@ -75,7 +75,7 @@ const Nav = () => {
             className="nav_content"
             onClick={() => {
               setHeading("TEMPERATURE");
-              setVal("29°C");
+              setVal("24°C");
               setGraph(t);
               // console.log(temp);
               setSignif(
@@ -89,7 +89,7 @@ const Nav = () => {
             className="nav_content"
             onClick={() => {
               setHeading("CO₂ CONTENT");
-              setVal("2.89%");
+              setVal("2.44%");
               setGraph(c);
               // console.log(co2);
               setSignif(
@@ -103,7 +103,7 @@ const Nav = () => {
             className="nav_content"
             onClick={() => {
               setHeading("RELATIVE HUMIDITY");
-              setVal("73%");
+              setVal("66.8%");
               setGraph(h);
               // console.log(humidity);
               setSignif(
